@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+
+  web:
+    image: furniture_inventory_app
+    ports:
+      - "5000:5000"
+    volumes:
+      # Mount templates directory so changes are instant
+      - ./templates:/flask-json-app/templates
+      # Mount uploads directory so photos are accessible
+      - ./uploads:/flask-json-app/uploads
+      # Mount the JSON file so you can view and edit it directly
+      - ./furniture_inventory.json:/flask-json-app/furniture_inventory.json
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

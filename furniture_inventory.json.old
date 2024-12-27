@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Table",
+        "value": 500.0,
+        "photo_path": "http://127.0.0.1:5000/uploads/image000001.jpg",
+        "cost": 45.0,
+        "archived": true
+    },
+    {
+        "name": "chair",
+        "value": 50.0,
+        "photo_path": "http://192.168.192.130:5000/uploads/IMG_2753.jpg"
+    },
+    {
+        "name": "Table",
+        "value": 23.0,
+        "cost": 2.0,
+        "photo_path": "http://192.168.192.130:5000/uploads/ChristmasAlbert.jpeg",
+        "archived": false
+    },
+    {
+        "name": "Pennsylvania House Sofa",
+        "value": 50.0,
+        "cost": 2.0,
+        "photo_path": "http://192.168.192.130:5000/uploads/PA_HouseSofa_Floral.jpeg",
+        "archived": true
+    }
+]

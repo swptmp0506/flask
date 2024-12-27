@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Furniture Item</title>
+</head>
+<body>
+    <h1>Edit Furniture Item</h1>
+    <form action="/edit/{{ item_id }}" method="POST">
+        <label for="itemName">Item Name:</label><br>
+        <input type="text" id="itemName" name="itemName" value="{{ item['name'] }}" required><br><br>
+
+        <label for="itemValue">Value ($):</label><br>
+        <input type="number" name="itemValue" value="{{ item['value'] }}" required><br><br>
+
+        <label for="itemCost">Cost ($):</label><br>
+        <input type="number" name="itemCost" value="{{ item['cost'] }}" required><br><br>
+
+        <label for="itemNotes">Notes:</label><br>
+        <textarea id="itemNotes" name="itemNotes" rows="4" cols="50">{{ item['notes'] }}</textarea><br><br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+    <br>
+    <a href="/inventory">Back to Inventory</a>
+</body>
+</html>

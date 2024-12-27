@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archived Items</title>
+</head>
+<body>
+    <h1>Archived Furniture Items</h1>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Value ($)</th>
+                <th>Cost ($)</th>
+                <th>Notes</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item['name'] }}</td>
+                <td>{{ item['value'] }}</td>
+                <td>{{ item['cost'] }}</td>
+                <td>{{ item['notes'] or 'N/A' }}</td>
+                <td>
+                    <a href="{{ item['photo_path'] }}" target="_blank">
+                        <img src="{{ item['photo_path'] }}" alt="{{ item['name'] }}" width="100">
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/inventory">Back to Inventory</a>
+</body>
+</html>

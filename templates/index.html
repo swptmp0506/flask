@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Furniture Item</title>
+</head>
+<body>
+    <h1>Upload Furniture Item</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="itemName">Item Name:</label><br>
+        <input type="text" id="itemName" name="itemName" required><br><br>
+
+        <label for="itemValue">Item Value ($):</label><br>
+        <input type="number" id="itemValue" name="itemValue" required><br><br>
+
+        <label for="itemCost">Item Cost ($):</label><br>
+        <input type="number" id="itemCost" name="itemCost" required><br><br>
+
+        <label for="itemNotes">Notes:</label><br>
+        <textarea id="itemNotes" name="itemNotes" rows="4" cols="50"></textarea><br><br>
+
+        <label for="itemPhoto">Upload Photo:</label><br>
+        <input type="file" id="itemPhoto" name="itemPhoto" accept="image/*" required><br><br>
+
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <a href="/inventory">View Inventory</a>
+</body>
+</html>

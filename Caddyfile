@@ -1,0 +1,7 @@
+192.168.192.130 {
+    @readonly path /inventory/read-only
+    route {
+        reverse_proxy @readonly http://my-app:5000
+        respond 404
+    }
+}

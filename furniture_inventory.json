@@ -1,0 +1,20 @@
+[
+    {
+        "id": 2,
+        "name": "Dresser",
+        "value": 2.0,
+        "cost": 44.0,
+        "notes": "",
+        "photo_path": "http://192.168.192.130:5000/uploads/ChristmasAlbert (2).jpeg",
+        "archived": true
+    },
+    {
+        "id": 3,
+        "name": "55",
+        "value": 66.0,
+        "cost": 66.0,
+        "notes": "",
+        "photo_path": "http://192.168.192.130:5000/uploads/ChristmasAlbert (1).jpeg",
+        "archived": true
+    }
+]
